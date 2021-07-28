@@ -4,7 +4,12 @@
   //components
 
   var likeComponent = Vue.extend({
-    props: ['message'],
+    props: {
+      message: {
+        type: String,
+        default: 'Like'
+      }
+    },
     data: function () {
       return {
         count: 0
